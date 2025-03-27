@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+    position: relative;
+}
+
+.smoke {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.element {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #00007d, #00ffff);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: smoke 1s 0s linear forwards;
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+        box-shadow: 0 0 10px aqua;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(5);
+        box-shadow: 0 0 50px aqua;
+        filter: hue-rotate(360deg);
+    }
+}
