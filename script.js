@@ -1,15 +1,14 @@
 let smoke = document.querySelector('.smoke');
 
 document.addEventListener('mousemove',(e)=>{
-          let a = document.createElement('div');
-    a.classList.add('element');
+          let elem = document.createElement('div');
+    elem.classList.add('element');
 
-    a.style.left = `${e.clientX}px`;
-    a.style.top = `${e.clientY}px`;
-    smoke.appendChild(a);    
+    elem.style.left = `${e.clientX}px`;
+    elem.style.top = `${e.clientY}px`;
+    smoke.appendChild(elem);    
 
-    a.addEventListener('animationend',()=>{
-        a.remove();
+    elem.addEventListener('animationend',()=>{
+        elem.remove();
     })
   })
-
