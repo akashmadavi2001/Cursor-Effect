@@ -6,10 +6,10 @@ document.addEventListener('mousemove',(e)=>{
 
           elem.style.left = `${e.clientX}px`;
           elem.style.top = `${e.clientY}px`;
-          
           smoke.appendChild(elem);    
 
     elem.addEventListener('animationend',()=>{
           elem.remove();
     });
   });
+
